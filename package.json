@@ -1,0 +1,23 @@
+{
+  "name": "cw-apirest",
+  "version": "1.0.0",
+  "description": "Rest API for Caelumweb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joviane/RestAPI.git"
+  },
+  "author": "Joviane & Marco Bruno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joviane/RestAPI/issues"
+  },
+  "homepage": "https://github.com/joviane/RestAPI#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
