@@ -8,10 +8,12 @@ app.get('/aulas', function(req, res) {
     host      : 'localhost',
     user      : 'root',
     password  : '',
-    database  : 'caelumweb2'
+    database  : 'homolog'
   });
 
-  connection.query('select * from Sala', function(err, result, fields) {
+  var query = 'select s.nome as sala, c.codigo as curso, d.dias as dia, h.nome as horario from Sala s, Curso c, Turma t, Turma_dias d, InstrutorEmAula i, Horario h where c.id = t.curso_id and t.sala_id = s.id and t.id = i.turma_id and t.id = d.turma_id and t.horario_id = h.id';
+
+  connection.query(query, function(err, result, fields) {
     res.send(result);
   });
 });
